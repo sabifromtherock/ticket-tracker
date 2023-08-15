@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables" as *;
+
+.filter-form {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__label {
+    padding: 10px;
+  }
+
+  &__input {
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
