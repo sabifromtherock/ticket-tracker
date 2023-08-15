@@ -1,5 +1,12 @@
 @use "../../assets/styles/variables" as *;
 
+.employees {
+  &__forms {
+    width: 150px;
+    margin: auto;
+  }
+}
+
 .employees-container {
   display: flex;
   justify-content: space-around;

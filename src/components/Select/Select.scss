@@ -1,6 +1,6 @@
 @use "../../assets/styles/variables" as *;
 
-.select-container {
+.select-form {
   text-align: center;
   display: flex;
   align-items: center;
@@ -13,6 +13,5 @@
   &__select {
     border-radius: 5px;
     padding: 5px;
-    width: 150px;
   }
 }

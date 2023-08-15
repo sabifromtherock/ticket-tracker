@@ -23,8 +23,10 @@ const EmployeesContainer = () => {
 
   return (
     <div className="employees">
-      <Filter setName={setName} />
-      <Select roles={uniqueRoles} setSelectedRole={setSelectedRole} />
+      <div className="employees__forms">
+        <Filter setName={setName} />
+        <Select roles={uniqueRoles} setSelectedRole={setSelectedRole} />
+      </div>
       <div className="employees-container">
         {filteredTeam.map((employee) => {
           return (

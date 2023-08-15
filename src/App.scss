@@ -3,6 +3,8 @@
 @use "./components/EmployeeCard/EmployeeCard.scss";
 @use "./components/EmployeesContainer/EmployeesContainer.scss";
 @use "./components/Select/Select.scss";
+@use "./components/Filter/Filter.scss";
+
 .app {
   padding: 0;
   margin: 0;
