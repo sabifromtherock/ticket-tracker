@@ -4,8 +4,8 @@ import team from "../../data/team";
 import Select from "../Select/Select";
 import { Team } from "../../types/Team";
 
-// Set automatically remove duplicates
-// convert the set back to an array using the spread operator ([...new Set(roles)])
+// Set : automatically remove duplicates
+// [...new Set(roles)] : convert the set back to an array
 const uniqueRoles: string[] = [...new Set(team.map((member) => member.role))];
 
 const EmployeesContainer = () => {
@@ -18,17 +18,19 @@ const EmployeesContainer = () => {
   if (selectedRole === "") filteredTeam = [...team];
 
   return (
-    <div>
+    <div className="employees">
       <Select roles={uniqueRoles} setSelectedRole={setSelectedRole} />
-      {filteredTeam.map((employee) => {
-        return (
-          <EmployeeCard
-            name={employee.name}
-            role={employee.role}
-            key={employee.id}
-          />
-        );
-      })}
+      <div className="employees-container">
+        {filteredTeam.map((employee) => {
+          return (
+            <EmployeeCard
+              name={employee.name}
+              role={employee.role}
+              key={employee.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

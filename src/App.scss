@@ -1,8 +1,12 @@
 @use "./components/Header/Header.scss";
 @use "./components/EmployeeCard/EmployeeCard.scss";
+@use "./components/EmployeesContainer/EmployeesContainer.scss";
+@use "./assets/styles/variables" as *;
 
-.reset {
+.app {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  height: 100vh;
+  background-color: $color-grey;
 }
