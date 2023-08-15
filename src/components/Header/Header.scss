@@ -1,0 +1,12 @@
+@use "../../assets/styles/variables" as *;
+
+.header {
+  text-align: center;
+  background-color: $color-black;
+
+  &__title {
+    color: $color-white;
+    padding: 18px;
+    font-size: 2.5rem;
+  }
+}
