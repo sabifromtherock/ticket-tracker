@@ -8,6 +8,9 @@
   border-radius: 20px 10px;
   width: 150px;
   box-shadow: 5px 10px $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__counter {
     color: $color-black;
