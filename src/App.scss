@@ -1,8 +1,8 @@
+@use "./assets/styles/variables" as *;
 @use "./components/Header/Header.scss";
 @use "./components/EmployeeCard/EmployeeCard.scss";
 @use "./components/EmployeesContainer/EmployeesContainer.scss";
-@use "./assets/styles/variables" as *;
-
+@use "./components/Select/Select.scss";
 .app {
   padding: 0;
   margin: 0;
