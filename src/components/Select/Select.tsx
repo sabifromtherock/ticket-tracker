@@ -9,9 +9,9 @@ const Select = ({ roles, setSelectedRole }: SelectProps) => {
   };
 
   return (
-    <div className="select-container">
+    <form className="select-container">
       <label className="select-container__label" htmlFor="select-role">
-        Choose a role:
+        Choose a role
       </label>
       <select
         className="select-container__select"
@@ -37,7 +37,7 @@ const Select = ({ roles, setSelectedRole }: SelectProps) => {
           );
         })}
       </select>
-    </div>
+    </form>
   );
 };
 
