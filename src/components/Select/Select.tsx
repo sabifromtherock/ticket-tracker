@@ -9,29 +9,25 @@ const Select = ({ roles, setSelectedRole }: SelectProps) => {
   };
 
   return (
-    <form className="select-container">
-      <label className="select-container__label" htmlFor="select-role">
+    <form className="select-form">
+      <label className="select-form__label" htmlFor="select-role">
         Choose a role
       </label>
       <select
-        className="select-container__select"
+        className="select-form__select"
         id="select-role"
         value=""
         onChange={handleChange}
       >
-        <option className="select-container__option" value="" disabled>
+        <option className="select-form__option" value="" disabled>
           Select an option
         </option>
-        <option className="select-container__option" value="all">
+        <option className="select-form__option" value="all">
           Select All
         </option>
         {roles.map((role, index) => {
           return (
-            <option
-              className="select-container__option"
-              value={role}
-              key={index}
-            >
+            <option className="select-form__option" value={role} key={index}>
               {role}
             </option>
           );

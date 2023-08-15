@@ -8,9 +8,16 @@ const Filter = ({ setName }: FilterProps) => {
   };
 
   return (
-    <form>
-      <label htmlFor="filter">Filter by Name</label>
-      <input type="text" id="filter" onInput={handleFilter} />
+    <form className="filter-form">
+      <label htmlFor="filter" className="filter-form__label">
+        Filter by Name
+      </label>
+      <input
+        type="text"
+        id="filter"
+        className="filter-form__input"
+        onInput={handleFilter}
+      />
     </form>
   );
 };

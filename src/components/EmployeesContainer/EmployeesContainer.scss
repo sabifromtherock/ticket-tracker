@@ -1,5 +1,12 @@
 @use "../../assets/styles/variables" as *;
 
+.employees {
+  &__forms {
+    width: 150px;
+    margin: auto;
+  }
+}
+
 .employees-container {
   display: flex;
   justify-content: space-around;
@@ -9,3 +16,9 @@
   padding: 30px;
   background-color: $color-grey;
 }
+
+// @media screen and (min-width: 768px) {
+//   .employees {
+//     padding: 30px 100px;
+//   }
+// }

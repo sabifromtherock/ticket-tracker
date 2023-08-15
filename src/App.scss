@@ -3,10 +3,21 @@
 @use "./components/EmployeeCard/EmployeeCard.scss";
 @use "./components/EmployeesContainer/EmployeesContainer.scss";
 @use "./components/Select/Select.scss";
-.app {
+@use "./components/Filter/Filter.scss";
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.app {
   height: 100vh;
   background-color: $color-grey;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    padding: 0 15%;
+  }
 }
