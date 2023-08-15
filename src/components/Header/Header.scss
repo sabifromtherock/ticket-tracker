@@ -2,10 +2,12 @@
 
 .header {
   text-align: center;
-  background-color: white;
+  background-color: $color-black;
+  height: 80px;
+  padding: calc((80px - 2.5rem) / 2);
 
   &__title {
-    color: $color-black;
+    color: $color-white;
     padding-bottom: 20px;
     font-size: 2.5rem;
   }
