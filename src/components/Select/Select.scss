@@ -1,0 +1,18 @@
+@use "../../assets/styles/variables" as *;
+
+.select-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__label {
+    padding: 10px;
+  }
+
+  &__select {
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+  }
+}

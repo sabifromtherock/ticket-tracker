@@ -1,3 +1,12 @@
+@use "./assets/styles/variables" as *;
+@use "./components/Header/Header.scss";
+@use "./components/EmployeeCard/EmployeeCard.scss";
+@use "./components/EmployeesContainer/EmployeesContainer.scss";
+@use "./components/Select/Select.scss";
 .app {
-  background-color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: $color-grey;
 }

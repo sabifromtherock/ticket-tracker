@@ -1,0 +1,27 @@
+@use "../../assets/styles/variables" as *;
+
+.employee-card {
+  background-color: $color-green;
+  text-align: center;
+  color: $color-white;
+  padding: 20px;
+  border-radius: 20px 10px;
+  width: 150px;
+  box-shadow: 5px 10px $color-black;
+
+  &__counter {
+    color: $color-black;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__arrow-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    display: block;
+    width: 30px;
+  }
+}
