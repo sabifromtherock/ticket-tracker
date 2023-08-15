@@ -22,6 +22,9 @@ const Select = ({ roles, setSelectedRole }: SelectProps) => {
         <option className="select-container__option" value="" disabled>
           Select an option
         </option>
+        <option className="select-container__option" value="all">
+          Select All
+        </option>
         {roles.map((role, index) => {
           return (
             <option

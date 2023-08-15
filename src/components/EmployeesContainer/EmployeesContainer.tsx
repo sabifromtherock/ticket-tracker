@@ -15,7 +15,7 @@ const EmployeesContainer = () => {
     return selectedRole === employee.role;
   });
 
-  if (selectedRole === "") filteredTeam = [...team];
+  if (selectedRole === "" || selectedRole === "all") filteredTeam = [...team];
 
   return (
     <div className="employees">
