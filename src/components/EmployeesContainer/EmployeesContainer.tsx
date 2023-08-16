@@ -19,7 +19,10 @@ const EmployeesContainer = () => {
     if (selectedRole) return selectedRole === employee.role;
   });
 
-  if (!name && filteredTeam.length === 0) filteredTeam = [...team];
+  if (!name && filteredTeam.length === 0)
+    filteredTeam = team.filter(() => {
+      return true;
+    });
 
   return (
     <div className="employees">
@@ -33,6 +36,7 @@ const EmployeesContainer = () => {
             <EmployeeCard
               name={employee.name}
               role={employee.role}
+              employee={team[employee.id - 1]}
               key={employee.id}
             />
           );
