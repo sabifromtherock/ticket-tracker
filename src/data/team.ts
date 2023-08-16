@@ -1,6 +1,6 @@
-import { Team } from "../types/Team";
+import { Employee } from "../types/Employee";
 
-const team: Team[] = [
+const team: Employee[] = [
   {
     id: 1,
     name: "Alima Miller",

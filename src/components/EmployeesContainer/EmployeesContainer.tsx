@@ -2,7 +2,7 @@ import { useState } from "react";
 import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 import team from "../../data/team";
 import Select from "../Select/Select";
-import { Team } from "../../types/Team";
+import { Employee } from "../../types/Employee";
 import Filter from "../Filter/Filter";
 
 // Set : automatically remove duplicates
@@ -13,7 +13,7 @@ const EmployeesContainer = () => {
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [name, setName] = useState<string>("");
 
-  let filteredTeam: Team[] = team.filter((employee) => {
+  let filteredTeam: Employee[] = team.filter((employee) => {
     if (name) return employee.name.toLowerCase().includes(name);
 
     if (selectedRole) return selectedRole === employee.role;

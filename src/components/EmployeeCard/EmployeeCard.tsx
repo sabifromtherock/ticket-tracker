@@ -2,12 +2,12 @@ import "./EmployeeCard.scss";
 import greenTick from "../../assets/images/check.png";
 import redCross from "../../assets/images/crossed.png";
 import { useState } from "react";
-import { Team } from "../../types/Team";
+import { Employee } from "../../types/Employee";
 
 type EmployeeCardProps = {
   name: string;
   role: string;
-  employee: Team;
+  employee: Employee;
 };
 
 const EmployeeCard = ({ name, role, employee }: EmployeeCardProps) => {
