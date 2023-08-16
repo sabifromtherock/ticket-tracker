@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 
 .employee-card {
-  background-color: $color-green;
+  background-color: $color-orange;
   text-align: center;
   color: $color-white;
   padding: 20px;
@@ -27,6 +27,9 @@
   &__arrow {
     display: block;
     width: 30px;
+  }
+  * {
+    background-color: $color-orange;
   }
 }
 
