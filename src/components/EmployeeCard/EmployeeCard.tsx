@@ -2,21 +2,28 @@ import "./EmployeeCard.scss";
 import greenTick from "../../assets/images/check.png";
 import redCross from "../../assets/images/crossed.png";
 import { useState } from "react";
+import { Employee } from "../../types/Employee";
 
 type EmployeeCardProps = {
   name: string;
   role: string;
+  employee: Employee;
 };
 
-const EmployeeCard = ({ name, role }: EmployeeCardProps) => {
-  const [counter, setCounter] = useState<number>(0);
+const EmployeeCard = ({ name, role, employee }: EmployeeCardProps) => {
+  const [counter, setCounter] = useState<number>(employee.counter || 0);
 
   const handleIncrement = () => {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+
+    employee.counter = counter + 1;
   };
 
   const handleDecrement = () => {
-    counter === 0 ? null : setCounter(counter - 1);
+    if (counter === 0) return;
+    setCounter((prevCounter) => prevCounter - 1);
+
+    employee.counter = counter - 1;
   };
 
   return (
