@@ -1,3 +1,4 @@
+import "./TicketCardsContainer.scss";
 import { useState } from "react";
 import TicketCard from "../TicketCard/TicketCard";
 import team from "../../data/team";

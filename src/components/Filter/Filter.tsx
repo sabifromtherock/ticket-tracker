@@ -1,3 +1,5 @@
+import "./Filter.scss";
+
 type FilterProps = {
   setName: (name: string) => void;
 };

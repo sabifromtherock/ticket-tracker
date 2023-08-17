@@ -1,3 +1,5 @@
+import "./Select.scss";
+
 type SelectProps = {
   roles: string[];
   setSelectedRole: (role: string) => void;
