@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import team from "./data/team";
 import "./App.scss";
 import TicketCardsContainer from "./components/TicketCardsContainer/TicketCardsContainer";
-import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import Profile from "./components/Profile/Profile";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        <Nav />
         <Routes>
           <Route path="/" element={<Home team={team} />} />
           <Route
