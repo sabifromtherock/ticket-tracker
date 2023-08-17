@@ -1,7 +1,7 @@
 import greenTick from "../../assets/images/check.png";
 import redCross from "../../assets/images/crossed.png";
 import placeHolderImage from "../../assets/images/profile-picture.png";
-
+import "./TicketCard.scss";
 import { useState } from "react";
 import { Employee } from "../../types/Employee";
 import { Link } from "react-router-dom";
@@ -34,14 +34,14 @@ const TicketCard = ({ name, role, employee }: EmployeeCardProps) => {
 
   return (
     <div className="employee-card">
-      <Link to={`/profile/${employee.id}`}>
+      <Link className="employee-card__link" to={`/profile/${employee.id}`}>
         <img
           src={employee.profile.profilePicture}
           onError={onImageError}
           alt="profile image"
           className="employee-card__profile-image"
         />
-        <h2 className="employee-card__title">{name}</h2>
+        <h2 className="employee-card__name">{name}</h2>
       </Link>
       <p className="employee-card__role">{role}</p>
       <div className="employee-card__counter-container">

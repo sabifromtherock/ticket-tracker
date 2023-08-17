@@ -16,7 +16,14 @@
   &__profile-image {
     align-self: center;
     width: 50px;
+    border-radius: 50%;
   }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+  }
+
   &__counter {
     color: $color-black;
     font-size: 24px;
