@@ -11,13 +11,9 @@ const uniqueRoles: string[] = [...new Set(team.map((member) => member.role))];
 
 type TicketCardsContainerProps = {
   team: Employee[];
-  profilePicture: string;
 };
 
-const TicketCardsContainer = ({
-  team,
-  profilePicture,
-}: TicketCardsContainerProps) => {
+const TicketCardsContainer = ({ team }: TicketCardsContainerProps) => {
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [name, setName] = useState<string>("");
 
@@ -45,7 +41,6 @@ const TicketCardsContainer = ({
               name={employee.name}
               role={employee.role}
               employee={team[employee.id - 1]}
-              profilePicture={profilePicture}
               key={employee.id}
             />
           );
