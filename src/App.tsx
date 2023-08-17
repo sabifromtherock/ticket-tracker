@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import team from "./data/team";
+import profilePicture from "./assets/images/profile-picture.png";
 import "./App.scss";
 import EmployeesContainer from "./components/EmployeesContainer/EmployeesContainer";
 import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -9,7 +12,16 @@ function App() {
       <div className="app">
         <Header />
         <Routes>
-          <Route path="/tickets" element={<EmployeesContainer />} />
+          <Route
+            path="/"
+            element={<Home team={team} profilePicture={profilePicture} />}
+          />
+          <Route
+            path="/tickets"
+            element={
+              <EmployeesContainer team={team} profilePicture={profilePicture} />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
