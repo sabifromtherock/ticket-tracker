@@ -1,5 +1,7 @@
 import greenTick from "../../assets/images/check.png";
 import redCross from "../../assets/images/crossed.png";
+import placeHolderImage from "../../assets/images/profile-picture.png";
+
 import { useState } from "react";
 import { Employee } from "../../types/Employee";
 import { Link } from "react-router-dom";
@@ -26,11 +28,16 @@ const TicketCard = ({ name, role, employee }: EmployeeCardProps) => {
     employee.counter = counter - 1;
   };
 
+  const onImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.src = placeHolderImage;
+  };
+
   return (
     <div className="employee-card">
       <Link to={`/profile/${employee.id}`}>
         <img
           src={employee.profile.profilePicture}
+          onError={onImageError}
           alt="profile image"
           className="employee-card__profile-image"
         />
