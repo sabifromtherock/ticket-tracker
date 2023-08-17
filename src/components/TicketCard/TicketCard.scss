@@ -1,6 +1,6 @@
 @use "../../assets/styles/variables" as *;
 
-.employee-card {
+.ticket-card {
   background-color: $color-orange;
   text-align: center;
   color: $color-white;
@@ -15,7 +15,7 @@
 
   &__profile-image {
     align-self: center;
-    width: 50px;
+    width: 80px;
     border-radius: 50%;
   }
 
@@ -28,6 +28,7 @@
     color: $color-black;
     font-size: 24px;
     font-weight: 800;
+    padding: 5px;
   }
 
   &__arrow-container {
@@ -45,7 +46,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .employee-card {
+  .ticket-card {
     width: 200px;
   }
 }

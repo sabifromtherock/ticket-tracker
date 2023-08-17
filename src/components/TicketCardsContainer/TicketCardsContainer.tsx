@@ -29,12 +29,12 @@ const TicketCardsContainer = ({ team }: TicketCardsContainerProps) => {
     });
 
   return (
-    <div className="employees">
-      <div className="employees__forms">
+    <div className="ticket">
+      <div className="ticket__forms">
         <Filter setName={setName} />
         <Select roles={uniqueRoles} setSelectedRole={setSelectedRole} />
       </div>
-      <div className="employees-container">
+      <div className="ticket-container">
         {filteredTeam.map((employee) => {
           return (
             <TicketCard

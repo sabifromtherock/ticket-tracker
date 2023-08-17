@@ -3,8 +3,8 @@
 .nav {
   text-align: center;
   background-color: $color-black;
-  height: 80px;
-  padding: calc((80px - 2.5rem) / 2);
+  height: 70px;
+  padding: calc((70px - 2.5rem) / 2);
   position: relative;
 
   &__title {
@@ -15,7 +15,7 @@
 
   &__link {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 20px;
     background-color: $color-white;
     padding: 5px 10px;

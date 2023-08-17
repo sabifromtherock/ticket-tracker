@@ -1,13 +1,13 @@
 @use "../../assets/styles/variables" as *;
 
-.employees {
+.ticket {
   &__forms {
     width: 150px;
     margin: auto;
   }
 }
 
-.employees-container {
+.ticket-container {
   display: flex;
   justify-content: space-around;
   align-content: space-around;
@@ -17,7 +17,7 @@
 }
 
 // @media screen and (min-width: 768px) {
-//   .employees {
+//   .ticket {
 //     padding: 30px 100px;
 //   }
 // }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Employee } from "../../types/Employee";
 import placeHolderImage from "../../assets/images/profile-picture.png";
+import "./Home.scss";
 
 type HomeProps = {
   team: Employee[];
@@ -12,20 +13,27 @@ const Home = ({ team }: HomeProps) => {
   };
 
   return (
-    <div>
-      <h2>Team members</h2>
-      {team.map((employee) => {
-        return (
-          <Link key={employee.id} to={`/profile/${employee.id}`}>
-            <img
-              src={employee.profile.profilePicture}
-              onError={onImageError}
-              alt="profile picture"
-            />
-            <h3>{employee.name}</h3>
-          </Link>
-        );
-      })}
+    <div className="home">
+      <h2 className="home__title">Team members</h2>
+      <div className="home__content">
+        {team.map((employee) => {
+          return (
+            <Link
+              className="home__link"
+              key={employee.id}
+              to={`/profile/${employee.id}`}
+            >
+              <img
+                className="home__image"
+                src={employee.profile.profilePicture}
+                onError={onImageError}
+                alt="profile picture"
+              />
+              <h3 className="home__name">{employee.name}</h3>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

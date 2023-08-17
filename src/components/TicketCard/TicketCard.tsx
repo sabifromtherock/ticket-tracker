@@ -33,29 +33,29 @@ const TicketCard = ({ name, role, employee }: EmployeeCardProps) => {
   };
 
   return (
-    <div className="employee-card">
-      <Link className="employee-card__link" to={`/profile/${employee.id}`}>
+    <div className="ticket-card">
+      <Link className="ticket-card__link" to={`/profile/${employee.id}`}>
         <img
           src={employee.profile.profilePicture}
           onError={onImageError}
           alt="profile image"
-          className="employee-card__profile-image"
+          className="ticket-card__profile-image"
         />
-        <h2 className="employee-card__name">{name}</h2>
+        <h2 className="ticket-card__name">{name}</h2>
       </Link>
-      <p className="employee-card__role">{role}</p>
-      <div className="employee-card__counter-container">
-        <h4 className="employee-card__counter-title">Counter</h4>
-        <p className="employee-card__counter">{counter}</p>
-        <div className="employee-card__arrow-container">
+      <p className="ticket-card__role">{role}</p>
+      <div className="ticket-card__counter-container">
+        <h4 className="ticket-card__counter-title">Counter</h4>
+        <p className="ticket-card__counter">{counter}</p>
+        <div className="ticket-card__arrow-container">
           <img
-            className="employee-card__arrow"
+            className="ticket-card__arrow"
             src={redCross}
             alt="red cross"
             onClick={handleDecrement}
           />
           <img
-            className="employee-card__arrow"
+            className="ticket-card__arrow"
             src={greenTick}
             alt="green tick"
             onClick={handleIncrement}
