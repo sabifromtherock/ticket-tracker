@@ -1,4 +1,3 @@
-import "./EmployeeCard.scss";
 import greenTick from "../../assets/images/check.png";
 import redCross from "../../assets/images/crossed.png";
 import { useState } from "react";
@@ -8,9 +7,15 @@ type EmployeeCardProps = {
   name: string;
   role: string;
   employee: Employee;
+  profilePicture: string;
 };
 
-const EmployeeCard = ({ name, role, employee }: EmployeeCardProps) => {
+const TicketCard = ({
+  name,
+  role,
+  employee,
+  profilePicture,
+}: EmployeeCardProps) => {
   const [counter, setCounter] = useState<number>(employee.counter || 0);
 
   const handleIncrement = () => {
@@ -28,6 +33,11 @@ const EmployeeCard = ({ name, role, employee }: EmployeeCardProps) => {
 
   return (
     <div className="employee-card">
+      <img
+        src={profilePicture}
+        alt="profile image"
+        className="employee-card__profile-image"
+      />
       <h2 className="employee-card__title">{name}</h2>
       <p className="employee-card__role">{role}</p>
       <div className="employee-card__counter-container">
@@ -52,4 +62,4 @@ const EmployeeCard = ({ name, role, employee }: EmployeeCardProps) => {
   );
 };
 
-export default EmployeeCard;
+export default TicketCard;

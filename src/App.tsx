@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import team from "./data/team";
 import profilePicture from "./assets/images/profile-picture.png";
 import "./App.scss";
-import EmployeesContainer from "./components/EmployeesContainer/EmployeesContainer";
+import TicketCardsContainer from "./components/TicketCardsContainer/TicketCardsContainer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 
@@ -19,7 +19,10 @@ function App() {
           <Route
             path="/tickets"
             element={
-              <EmployeesContainer team={team} profilePicture={profilePicture} />
+              <TicketCardsContainer
+                team={team}
+                profilePicture={profilePicture}
+              />
             }
           />
         </Routes>

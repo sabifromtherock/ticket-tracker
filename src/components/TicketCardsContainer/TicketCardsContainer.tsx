@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
+import TicketCard from "../TicketCard/TicketCard";
 import team from "../../data/team";
 import Select from "../Select/Select";
 import { Employee } from "../../types/Employee";
@@ -9,7 +9,15 @@ import Filter from "../Filter/Filter";
 // [...new Set(roles)] : convert the set back to an array
 const uniqueRoles: string[] = [...new Set(team.map((member) => member.role))];
 
-const EmployeesContainer = () => {
+type TicketCardsContainerProps = {
+  team: Employee[];
+  profilePicture: string;
+};
+
+const TicketCardsContainer = ({
+  team,
+  profilePicture,
+}: TicketCardsContainerProps) => {
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [name, setName] = useState<string>("");
 
@@ -33,10 +41,11 @@ const EmployeesContainer = () => {
       <div className="employees-container">
         {filteredTeam.map((employee) => {
           return (
-            <EmployeeCard
+            <TicketCard
               name={employee.name}
               role={employee.role}
               employee={team[employee.id - 1]}
+              profilePicture={profilePicture}
               key={employee.id}
             />
           );
@@ -46,4 +55,4 @@ const EmployeesContainer = () => {
   );
 };
 
-export default EmployeesContainer;
+export default TicketCardsContainer;
