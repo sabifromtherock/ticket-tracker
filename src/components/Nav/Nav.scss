@@ -2,27 +2,60 @@
 
 .nav {
   text-align: center;
+  display: flex;
+  flex-direction: column;
   background-color: $color-black;
-  height: 70px;
-  padding: calc((70px - 2.5rem) / 2);
-  position: relative;
+  height: 100px;
 
   &__title {
+    padding-top: 10px;
     background-color: $color-black;
     color: $color-white;
     font-size: 2.5rem;
   }
 
+  &__link-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $color-black;
+    width: 100%;
+  }
+
   &__link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background-color: $color-white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    width: 80px;
+    color: $color-black;
     text-decoration: none;
     font-size: 1.2rem;
-    color: $color-black;
+    padding: 5px 0;
+    display: inline-block;
+    width: 49%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 0 5px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    &__title {
+      padding-top: calc((94px - 2.5rem) / 2);
+      padding-right: calc((50% - 250px));
+      justify-self: center;
+    }
+
+    &__link-container {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link {
+      color: $color-white;
+      background-color: $color-black;
+      width: 100px;
+      padding: 10px;
+    }
   }
 }
