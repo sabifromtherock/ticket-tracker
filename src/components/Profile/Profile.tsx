@@ -1,4 +1,5 @@
 import "./Profile.scss";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Employee } from "../../types/Employee";
 import placeHolderImage from "../../assets/images/profile-picture.png";
@@ -11,7 +12,16 @@ const Profile = ({ team }: EmployeeTileProps) => {
   const { id } = useParams();
   const employee = team.find((employee) => employee.id === Number(id));
 
-  if (!employee) return <p>Employee ID not found.</p>;
+  if (!employee)
+    return (
+      <div className="id-not-found">
+        <Link to={"/"} className="id-not-found__link">
+          Employee profile not found.
+          <br />
+          Click on Me to go Home page!
+        </Link>
+      </div>
+    );
 
   const onImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.src = placeHolderImage;

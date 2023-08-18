@@ -1,0 +1,20 @@
+@use "../../assets/styles/variables" as *;
+
+.not-exist {
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+  font-size: 20px;
+  background-color: $color-orange;
+  padding: 20px 0;
+  width: 300px;
+  border-radius: 50px;
+  border: 2px solid $color-black;
+
+  &__link {
+    background-color: $color-orange;
+    color: $color-black;
+    width: 300px;
+    text-decoration: none;
+  }
+}

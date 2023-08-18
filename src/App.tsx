@@ -5,8 +5,8 @@ import TicketCardsContainer from "./components/TicketCardsContainer/TicketCardsC
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import Profile from "./components/Profile/Profile";
+import NotExist from "./components/NotExist/NotExist";
 
-HashRouter;
 function App() {
   return (
     <HashRouter>
@@ -19,6 +19,7 @@ function App() {
             element={<TicketCardsContainer team={team} />}
           />
           <Route path="/profile/:id" element={<Profile team={team} />} />
+          <Route path="*" element={<NotExist />} />
         </Routes>
       </div>
     </HashRouter>
