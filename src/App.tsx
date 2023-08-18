@@ -12,12 +12,15 @@ function App() {
       <div className="app">
         <Nav />
         <Routes>
-          <Route path="/" element={<Home team={team} />} />
+          <Route path="/ticket-tracker" element={<Home team={team} />} />
           <Route
-            path="/tickets"
+            path="/ticket-tracker/tickets"
             element={<TicketCardsContainer team={team} />}
           />
-          <Route path="/profile/:id" element={<Profile team={team} />} />
+          <Route
+            path="/ticket-tracker/profile/:id"
+            element={<Profile team={team} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

@@ -4,11 +4,11 @@ import { useState } from "react";
 
 const Nav = () => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
-  let path: string = "/tickets";
+  let path: string = "/ticket-tracker/tickets";
   let label: string = "Tickets";
 
   if (isClicked) {
-    path = "/";
+    path = "/ticket-tracker";
     label = "Home";
   }
 

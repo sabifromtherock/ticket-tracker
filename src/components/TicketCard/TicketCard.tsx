@@ -34,7 +34,10 @@ const TicketCard = ({ name, role, employee }: EmployeeCardProps) => {
 
   return (
     <div className="ticket-card">
-      <Link className="ticket-card__link" to={`/profile/${employee.id}`}>
+      <Link
+        className="ticket-card__link"
+        to={`/ticket-tracker/profile/${employee.id}`}
+      >
         <img
           src={employee.profile.profilePicture}
           onError={onImageError}

@@ -21,7 +21,7 @@ const Home = ({ team }: HomeProps) => {
             <Link
               className="home__link"
               key={employee.id}
-              to={`/profile/${employee.id}`}
+              to={`/ticket-tracker/profile/${employee.id}`}
             >
               <img
                 className="home__image"
