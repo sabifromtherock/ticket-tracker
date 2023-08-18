@@ -13,15 +13,12 @@ function App() {
       <div className="app">
         <Nav />
         <Routes>
-          <Route path="/ticket-tracker" element={<Home team={team} />} />
+          <Route path="/" element={<Home team={team} />} />
           <Route
-            path="/ticket-tracker/tickets"
+            path="/tickets"
             element={<TicketCardsContainer team={team} />}
           />
-          <Route
-            path="/ticket-tracker/profile/:id"
-            element={<Profile team={team} />}
-          />
+          <Route path="/profile/:id" element={<Profile team={team} />} />
         </Routes>
       </div>
     </HashRouter>
