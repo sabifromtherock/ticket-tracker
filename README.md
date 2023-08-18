@@ -2,12 +2,6 @@
 
 The Ticket Tracker project is designed to help employees manage their workflow by keeping track of completed tickets and comparing ticket completion numbers among team members.
 
-### Screenshot Links
-
-- [Home Page](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/homePage.png)<br/>
-- [Tickets Page](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/ticketsPage.png)<br/>
-- [Profile Page](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/profilePage.png)
-
 ## Features
 
 ### Track Completed Tickets
@@ -22,9 +16,15 @@ This functionality allows you to compare the number of tickets completed by diff
 
 1. **Home Page**: The home page displays the names and pictures of all team members.
 
+   [Home Page Screenshot](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/homePage.png)
+
 2. **Tickets Page**: The tickets page presents the ticket tracker, which showcases the ticket completion count for each team member.
 
+   [Tickets Page Screenshot](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/ticketsPage.png)
+
 3. **Profile Page**: By clicking on a team member's ticket on the Tickets page or their name on the Home page, you can access the profile page. The profile page provides additional information about the selected team member.
+
+   [Profile Page Screenshot](https://github.com/sabifromtherock/ticket-tracker/blob/main/public/profilePage.png)
 
 ## Getting Started
 
