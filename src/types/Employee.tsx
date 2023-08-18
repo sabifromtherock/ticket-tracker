@@ -3,4 +3,10 @@ export type Employee = {
   name: string;
   role: string;
   counter?: number;
+  profile: {
+    experience: string;
+    department: string;
+    techstack: string[];
+    profilePicture: string;
+  };
 };

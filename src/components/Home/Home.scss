@@ -1,0 +1,50 @@
+@use "../../assets/styles/variables" as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px 40px;
+
+  &__title {
+    height: 160px;
+    padding-top: 100px;
+    font-size: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-grey;
+    gap: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+    background-color: $color-orange;
+    width: 150px;
+    border-radius: 20px 10px;
+    box-shadow: 5px 10px rgba($color-black, 0.5);
+    padding: 30px 10px;
+  }
+
+  &__image {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: $color-black;
+    background-color: $color-orange;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    &__link {
+      width: 200px;
+    }
+  }
+}

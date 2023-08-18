@@ -1,13 +1,26 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import team from "./data/team";
 import "./App.scss";
-import EmployeesContainer from "./components/EmployeesContainer/EmployeesContainer";
-import Header from "./components/Header/Header";
+import TicketCardsContainer from "./components/TicketCardsContainer/TicketCardsContainer";
+import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <EmployeesContainer />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home team={team} />} />
+          <Route
+            path="/tickets"
+            element={<TicketCardsContainer team={team} />}
+          />
+          <Route path="/profile/:id" element={<Profile team={team} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,63 @@
+@use "../../assets/styles/variables" as *;
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  background-color: $color-orange;
+  padding: 40px;
+  background-color: $color-orange;
+  border-radius: 20px 10px;
+  box-shadow: 10px 20px rgba($color-black, 0.5);
+  margin: 30px;
+
+  * {
+    background-color: $color-orange;
+  }
+
+  &__image {
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 2rem;
+    padding: 30px;
+  }
+
+  &__details {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  &__paragraph,
+  &__list,
+  &__item {
+    padding: 5px;
+  }
+
+  &__item {
+    padding-left: 100px;
+    list-style-position: inside;
+    list-style-type: square;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile-container {
+    padding: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+
+    &__name {
+      padding: 30px;
+    }
+
+    &__details {
+      padding-top: 50px;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+}

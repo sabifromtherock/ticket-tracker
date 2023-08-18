@@ -1,5 +1,6 @@
+import "./TicketCardsContainer.scss";
 import { useState } from "react";
-import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
+import TicketCard from "../TicketCard/TicketCard";
 import team from "../../data/team";
 import Select from "../Select/Select";
 import { Employee } from "../../types/Employee";
@@ -9,7 +10,11 @@ import Filter from "../Filter/Filter";
 // [...new Set(roles)] : convert the set back to an array
 const uniqueRoles: string[] = [...new Set(team.map((member) => member.role))];
 
-const EmployeesContainer = () => {
+type TicketCardsContainerProps = {
+  team: Employee[];
+};
+
+const TicketCardsContainer = ({ team }: TicketCardsContainerProps) => {
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [name, setName] = useState<string>("");
 
@@ -25,15 +30,15 @@ const EmployeesContainer = () => {
     });
 
   return (
-    <div className="employees">
-      <div className="employees__forms">
+    <div className="ticket">
+      <div className="ticket__forms">
         <Filter setName={setName} />
         <Select roles={uniqueRoles} setSelectedRole={setSelectedRole} />
       </div>
-      <div className="employees-container">
+      <div className="ticket-container">
         {filteredTeam.map((employee) => {
           return (
-            <EmployeeCard
+            <TicketCard
               name={employee.name}
               role={employee.role}
               employee={team[employee.id - 1]}
@@ -46,4 +51,4 @@ const EmployeesContainer = () => {
   );
 };
 
-export default EmployeesContainer;
+export default TicketCardsContainer;
